@@ -1,0 +1,52 @@
+<!--Simple html page. Bokeh plot will be embedded in the body-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+            body {
+              font-family: 'Noto Sans', sans-serif;
+              -webkit-font-smoothing: antialiased;
+              text-rendering: optimizeLegibility;
+              color: #000000;
+              background: #FFFFFF;
+             } 
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta charset="utf-8">
+
+        {{ bokeh_css }}
+        {{ bokeh_js }}
+    </head>
+
+    <body class="bg-dark">
+        <!--Add a heading above the plots-->
+        
+        <!--Insert the Bokeh plots and widgets here--> 
+        <div class="container container-lg">
+            <div class="jumbotron py-2 mt-5 bg-success text-white">
+                <h1 class="display-4">Tugas Besar Visualisasi Data!</h1>
+                <p class="lead">Visualiasi Interaktif Data Covid-19 Dengan Menggunakan Python Bokeh.</p>
+            </div>
+            <div class="card shadow-lg">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    {{ plot_div|indent(8) }}
+                    {{ plot_script|indent(8) }}
+                </div>
+            </div>
+            <div class="jumbotron py-2 bg-success mt-4 text-white">
+                <p>
+                    Anggota Kelompok: <br/>
+                    - Muhammad Abdurrahman Al Jauzy (1301184074) <br/>
+                    - M Syafiq Yukinanda (1301183281) <br/>
+                    - Khalifa Lyan Bohemianda (1301180195) <br/>
+                </p> 
+            </div>
+            <!-- <hr class="my-4"> -->
+        </div> 
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
